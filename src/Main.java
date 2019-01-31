@@ -23,17 +23,17 @@ public class Main {
         }
 
         try {
-            File input = new File("D:\\apply\\Ahmed Hassan\\Excercise\\ProgrammingExcercise\\src\\input.html");
+            File input = new File("/apply/Ahmed Hassan/Excercise/ProgrammingExcercise/src/input.html");
             web = Jsoup.parse(input, "UTF-8");   //TODO handle baseURi
         }
         catch (IOException e) {
             //TODO
         }
 
+        //10 newest
         ListIterator listIterator = newest.body().getElementsByClass("container").select("div#questions").listIterator();
         Elements questions = ((Element) listIterator.next()).children();
         ListIterator listIterator2 = questions.listIterator();
-        //10 newest
         Element p = web.select("p").first();
         putLinks(p, listIterator2);
 
@@ -44,43 +44,36 @@ public class Main {
         p = web.select("p#second").first();
         putLinks(p, listIterator2);
 
-
-//        for (int counter = 20; counter> 0; counter--){
-//            Element e = (Element) listIterator2.next();
-//            //System.out.println("<p> https://stackoverflow.com" + e.select("div.summary h3 a[href]").toString());
-//            //h2.html("<p> https://stackoverflow.com" + e.select("div.summary h3 a[href]").toString());
-//            Element e2 = e.select("div.summary h3 a[href]").first();
-//            e2.removeClass("question-hyperlink");
-//            String href = e2.attr("abs:href");
-//            e2.attr("href", href);
-//            p.html(e2.toString());
-//            System.out.println(p);
-//            p = p.nextElementSibling();
-            //most voted
-//            if (p == null) p = web.select("p#second").first();
-//            System.out.println(p);
-           // System.out.println(e.select("div.summary h3 a[href]").toString());
-
+        /*
+        //adding extra feature of showing question tags (other than android)
+        listIterator2 = questions.listIterator();
+        Elements divs = web.select("div#tag");
+        for (int counter = 10; counter>0;counter--){
+            Element e1 = (Element) listIterator2.next();
+            Elements tags = e1.select("a[href].post-tag");
+            //tags.addClass("tags t-android t-android-layout t-user-interface t-dimension t-units-of-measurement");
+            String href = tags.attr("abs:href");
+            tags.attr("href", href);
+            divs.next().html("tags: " + tags.toString());
+        }
+*/
 
         //save changes
-        File output = new File("D:\\apply\\Ahmed Hassan\\Excercise\\ProgrammingExcercise\\src\\output.html");
+        File output = new File("/apply/Ahmed Hassan/Excercise/ProgrammingExcercise/src/output.html");
         PrintWriter writer = new PrintWriter(output, "UTF-8");
         writer.println(web);
         writer.close();
-
-        }
+    }
 
     public static void  putLinks(Element element, ListIterator listIterator) {
         for (int counter = 10; counter> 0; counter--){
             Element e1 = (Element) listIterator.next();
-            //System.out.println("<p> https://stackoverflow.com" + e.select("div.summary h3 a[href]").toString());
-            //h2.html("<p> https://stackoverflow.com" + e.select("div.summary h3 a[href]").toString());
             Element e2 = e1.select("div.summary h3 a[href]").first();
             e2.removeClass("question-hyperlink");
             String href = e2.attr("abs:href");
             e2.attr("href", href);
             element.html(e2.toString());
-            System.out.println(element);
+            //System.out.println(element);
             element = element.nextElementSibling();
         }
     }

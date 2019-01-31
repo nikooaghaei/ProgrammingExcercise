@@ -3,15 +3,15 @@
  <head>
   <title>Exercise</title> 
   <meta charset="UTF-8"> 
-  <link rel="stylesheet" type="text/css" href="stylesheet/homepage.css"> 
+  <link rel="stylesheet" type="text/css" href="stylesheet/input.css"> 
  </head>
  <body> 
-  <script type="text/javascript" src="stylesheet/homepage.js"></script> 
+  <script type="text/javascript" src="stylesheet/input.js"></script> 
   <!-- sidebar --> 
   <div class="sidebar"> 
    <a href="#">Menu<br>_____</a> 
-   <a href="#" onclick="smoothScroll(document.getElementById('home'))">10 Newest</a> 
-   <a href="#" onclick="smoothScroll(document.getElementById('education'))">10 Top-voted</a> 
+   <a href="#" onclick="smoothScroll(document.getElementById('new'))">10 Newest</a> 
+   <a href="#" onclick="smoothScroll(document.getElementById('vote'))">10 Top-voted</a> 
    <!--  <a href="#" onclick="smoothScroll(document.getElementById('career'))">Career</a>
   <a href="#" onclick="smoothScroll(document.getElementById('awards'))">Awards</a>	--> 
   </div> 
@@ -20,31 +20,41 @@
    <div class="row"> 
     <div class="threefifth contain"> 
      <h2 class="textH" id="new">10 Newest</h2> 
-     <p><a href="https://stackoverflow.com/questions/54451685/javax-net-ssl-sslexception-connection-closed-by-peer">javax.net.ssl.SSLException: Connection closed by peer</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451622/android-java-apply-a-kernel-3x4-to-a-video-that-is-recorded-by-camera-and-see-a">Android java apply a kernel 3x4 to a video that is recorded by camera and see a preview of it effect Vhs</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451587/service-worker-install-is-not-working-on-ios-but-works-on-android">Service Worker 'install' is not working on iOS, but works on Android</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451508/android-exoplayer-only-playing-audio-without-video">Android Exoplayer only playing audio without video</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451473/the-chrome-stops-error-is-recieved-when-i-am-trying-to-implement-this-paypal-but">The chrome stops error is recieved when I am trying to implement this paypal button</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451408/how-to-build-a-simple-android-app-without-ide-and-emulator-tutorial-appreciated">How to build a simple Android app without IDE and emulator (tutorial appreciated)? [on hold]</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451354/how-to-change-a-retrofit-callback-instance-into-a-lambda-expression">How to change a Retrofit Callback instance into a Lambda expression?</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451349/auto-scroll-happening-with-scrollview-and-not-getting-margin-bottom-through-rela">Auto scroll happening with ScrollView and not getting margin bottom through RelativeLayout.LayoutParams</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451312/not-receiving-a-firebase-push-notification-on-an-android-emulator">Not receiving a Firebase push notification on an Android emulator?</a></p> 
-     <p><a href="https://stackoverflow.com/questions/54451203/android-9-pie-not-able-to-capture-any-api-native-web-through-network-mon">Android 9 (Pie) - Not able to capture any api (native / web) through network monitoring tools such Charles proxy and Fiddler</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455283/crossplatform-appium-code-for-ios-and-android-platform">Crossplatform appium code for iOS and Android platform</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455269/socket-data-in-recyclerview-making-my-android-app-slowapp-hanging-while-scrolli">Socket data in recyclerview making my android app slow(App hanging while scrolling)</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455239/xamarin-android-application-crashes-when-power-saving-mode-is-enabled">Xamarin.Android application crashes when power saving mode is enabled</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455224/how-to-reduce-the-stf-minicap-screenshots-frame-rate">How to reduce the STF minicap screenshots frame rate?</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455200/how-setcurrentitem-in-viewpager-when-user-come-from-share-option-android">How setCurrentItem in ViewPager when user come from share option - Android</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455195/duplicate-zip-entry-97-jarandroidx-versionedparcelable-customversionedparcelab">Duplicate zip entry [97.jar:androidx/versionedparcelable/CustomVersionedParcelable.class]</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455134/im-stuck-on-waiting-for-any-devices-its-about-rooting-i-dont-really-unde">I'm stuck on &lt; waiting for any devices &gt; it's about rooting, I don't really understand</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455132/get-value-of-each-selected-slot-coming-from-server">Get value of each selected slot coming from server</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455127/extra-space-at-the-top-of-keyboard-android">Extra space at the top of Keyboard - Android</a></p> 
+     <p><a href="https://stackoverflow.com/questions/54455120/some-time-on-click-listener-is-not-working-properly-in-android-hanging-the-pho">Some time On click listener is not working properly in android . hanging the phone and application is going irresponsive</a></p> 
     </div> 
    </div> 
    <div class="row"> 
     <div class="threefifth contain"> 
      <h2 class="textH" id="vote">10 Top-voted</h2> 
      <p id="second"><a href="https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp">What is the difference between “px”, “dip”, “dp” and “sp”?</a></p> 
+     <!-- <div id="tag"> </div> 		for extra feature--> 
      <p id="second"><a href="https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard">Close/hide the Android Soft Keyboard</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/13375357/proper-use-cases-for-android-usermanager-isuseragoat">Proper use cases for Android UserManager.isUserAGoat()?</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/1554099/why-is-the-android-emulator-so-slow-how-can-we-speed-up-the-android-emulator">Why is the Android emulator so slow? How can we speed up the Android emulator? [closed]</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/1555109/stop-edittext-from-gaining-focus-at-activity-startup">Stop EditText from gaining focus at Activity startup</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/2785485/is-there-a-unique-android-device-id">Is there a unique Android device ID?</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/151777/how-do-save-an-android-activity-state-using-save-instance-state">How do save an Android Activity state using save instance state?</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/6343166/how-do-i-fix-android-os-networkonmainthreadexception">How do I fix android.os.NetworkOnMainThreadException?</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/101754/is-there-a-way-to-run-python-on-android">Is there a way to run Python on Android? [closed]</a></p> 
+     <!-- <div id="tag"> </div> --> 
      <p id="second"><a href="https://stackoverflow.com/questions/2194808/debug-certificate-expired-error-in-eclipse-android-plugins">“Debug certificate expired” error in Eclipse Android plugins</a></p> 
+     <!-- <div id="tag"> </div> --> 
     </div> 
    </div> 
    <!--  <div class="row">
@@ -68,7 +78,7 @@
   </div>	--> 
    <footer id="myFooter"> 
     <div class="footer"> 
-     <h4>web page made by nikoo aghaei</h4> 
+     <h4>web page made by Nikoo Aghaei</h4> 
     </div> 
     <!-- END MAIN --> 
    </footer>
